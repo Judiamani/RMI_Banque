@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OperationsViewsController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="765.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Fichier">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Actualiser" />
+                  <MenuItem mnemonicParsing="false" text="Supprimer une opération" />
+                  <MenuItem mnemonicParsing="false" text="Quitter" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edition">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="lister les opérations" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Apropos" />
+                  <MenuItem mnemonicParsing="false" text="Preferences" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ScrollPane layoutX="77.0" layoutY="106.0" prefHeight="328.0" prefWidth="613.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="607.0">
+               <children>
+                  <TableView fx:id="table_op" layoutX="138.0" layoutY="61.0" prefHeight="322.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_num" prefWidth="92.0" text="NUMERO" />
+                      <TableColumn fx:id="col_type_op" prefWidth="255.0" text="TYPE OPERATION" />
+                        <TableColumn fx:id="col_date_op" prefWidth="259.0" text="DATE OPERATION" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane layoutX="162.0" layoutY="52.0" prefHeight="38.0" prefWidth="442.0" style="-fx-background-color: #03d9ff;">
+         <children>
+            <Label fx:id="aff_list_op_cptno" layoutX="124.0" layoutY="4.0" text="Liste des opérations" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btn_exit" layoutX="333.0" layoutY="452.0" mnemonicParsing="false" onAction="#act_btn_exit" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: red;" text="Quitter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
